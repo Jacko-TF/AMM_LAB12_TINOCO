@@ -52,16 +52,10 @@
             <Label Text="{Binding Description}"></Label>
             <CheckBox IsChecked="{Binding Status}"></CheckBox>
             <ListView
-                BackgroundColor="White"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
                 ItemsSource="{Binding Tasks}"
                 >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Label Text="{Binding Title}"></Label>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>

@@ -75,17 +75,17 @@ namespace AMM_LAB12_TINOCO.ViewModel
 
         public TaskViewModel()
         {
+            ObservableCollection<TaskModel> TaskModels = new ObservableCollection<TaskModel>();
             Save = new Command(() =>
             {
                 TaskModel x = new TaskModel(Title, Status, Description);
-                Console.WriteLine(x);
-                Description= x.Title;
-                Tasks.Add(new TaskModel(Title, Status, Description));
+                TaskModels.Add(x);
+                //Tasks.Add(new TaskModel(Title, Status, Description));
             });
 
             Get = new Command(() =>
             {
-                
+                Tasks = new ObservableCollection<TaskModel>(TaskModels);
             });
         }
     }
